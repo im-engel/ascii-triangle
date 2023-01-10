@@ -16,4 +16,4 @@ Ascii Triangle with heigth of 5
 ![ascii-triangle-with-height-5](./images/ascii-triangle-with-height-5.png)
 
 Ascii Triangle with heigth of 10
-![ascii-triangle-with-height-10](./images/ascii-triangle-with-height-5)
+![ascii-triangle-with-height-10](./images/ascii-triangle-with-height-10.png)
