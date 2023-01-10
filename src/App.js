@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+export const App = () => {
+    const onInputChange=(e)=> {
+        console.clear()
+        const triangleHeight = e.target.value ?? 0
+        if (triangleHeight <1 || isNaN(triangleHeight)) return
+
+        for (let index = 0; index < triangleHeight; index++) {
+            let asciiTriangle = ""
+            let asciiTriangleSpace=""
+            const spaceIndexCount = triangleHeight - index - 1
+
+            for (let spaceIndex = 0; spaceIndex < spaceIndexCount; spaceIndex++) {
+                asciiTriangleSpace +=  " "
+            }
+
+            for (let starIndex = 0; starIndex < index; starIndex++){
+                asciiTriangle+="*"
+            }
+            
+            console.log(asciiTriangleSpace + asciiTriangle + "*" + asciiTriangle + asciiTriangleSpace) 
+        }
+    }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <input type="text" onChange={onInputChange}/>
       </header>
     </div>
   );
 }
-
-export default App;
